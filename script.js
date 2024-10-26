@@ -765,3 +765,9 @@ function enter() {
 function bringToBehind() {
   document.getElementById("door").style.zIndex = "-10000";
 }
+
+function hideLoadingBackground() {
+  document.querySelector(".loading-background").style.opacity = "0"
+}
+
+setTimeout(hideLoadingBackground, 4600);
