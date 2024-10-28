@@ -729,43 +729,6 @@ function removeHeartAndGift() {
   document.getElementById("pinkboard").style.zIndex = "-10";
 }
 
-function enter() {
-  const door = anime({
-    targets: ".door",
-    duration: 1000,
-    scale: 15,
-    opacity: 0,
-    easing: "easeInOutQuad",
-  });
-
-  anime({
-    targets: ".wrapper",
-    duration: 2000,
-    delay: 1000,
-    opacity: 1,
-    easing: "easeInOutQuad",
-  });
-
-  anime({
-    targets: ".music-container",
-    duration: 2000,
-    delay: 1000,
-    opacity: 1,
-    easing: "easeInOutQuad",
-  });
-
-  anime({
-    targets: ".enter",
-    duration: 100,
-    opacity: 0,
-  });
-
-}
-
-function bringToBehind() {
-  document.getElementById("door").style.zIndex = "-10000";
-}
-
 function hideLoadingBackground() {
   document.querySelector(".loading-background").style.opacity = "0"
 }
