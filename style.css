@@ -835,14 +835,13 @@ body {
 /* Add this media query at the end of your CSS */
 @media screen and (max-width: 1280px) and (max-height: 720px) {
   /* Adjust the layout and styling for the 1280x720 media screen */
-  /* .background {
+  .background {
     position: absolute;
     height: 150px;
     width: 300px;
     background-color: #e3caa5;
-    top: 33%;
-    left: 38.6%;
-  } */
+    margin-left: 6.3rem;
+  }
 
   .wrapper {
     height: 100px;
@@ -1014,10 +1013,12 @@ body {
     font-weight: bold;
     pointer-events: none;
   }
+
   .trackartist {
     font-size: 0.8rem;
     pointer-events: none;
   }
+
   .track-nav {
     gap: 0.1rem;
     display: flex;
@@ -1052,11 +1053,13 @@ body {
     top: 7px;
     left: 3.5rem;
   }
+
   .sound-bars {
     width: 100%;
     width: 60px;
     height: 60px;
   }
+
   .prev-track,
   .playpause-track,
   .next-track {
@@ -1094,31 +1097,37 @@ body {
     width: 50px;
     height: 50px;
     background-color: transparent;
-    margin-top: -800px;
+    margin-top: -900px;
     margin-left: 0;
   }
 
   /* Add more media queries and adjustments as needed for different screen sizes */
 }
 
-@media screen and (max-width: 600px) and (max-height: 719px){
-  html{
-    height: 100%;
-    width: 100%;
-  }
-  .wrapper {
-    height: 50px;
-    width: 200px;
-    /* background-color: #E3CAA5; */
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    z-index: 0;
-    margin-left: -100px;
-    margin-top: -100px;
+@media screen and (max-width: 450px) {
+  .music-container {
+    width: 90%;
+    left: 10px;
   }
 
-  .door{
-    left: 29%;
+  .gift-tab {
+    left: 300px;
+    top: 700px;
+    opacity: 1;
+  }
+
+  .flower-tab {
+    top: 700px;
+    opacity: 1;
+  }
+
+  .heart-tab {
+    left: 60px;
+    top: 700px;
+    opacity: 1;
+  }
+
+  .letter #typewriterText {
+    font-size: 22px;
   }
 }
