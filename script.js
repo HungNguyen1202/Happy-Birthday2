@@ -1,81 +1,166 @@
 function ani() {
-  const paper = anime({
-    targets: ".letter",
-    durations: 1000,
-    scale: 3.7,
-  });
+  if (mediaQuery.matches) {
+    const paper = anime({
+      targets: ".letter",
+      durations: 1000,
+      height: 600,
+      width: 350,
+      translateY: -300,
+    });
 
-  const buttonDissapear = anime({
-    targets: ".btn",
-    opacity: -1,
-    duration: 20000,
-  });
+    const buttonDissapear = anime({
+      targets: ".btn",
+      opacity: -1,
+      duration: 20000,
+    });
 
-  const lidMove = anime({
-    targets: ".lid",
-    opacity: -1,
-    duration: 20000,
-  });
+    const lidMove = anime({
+      targets: ".lid",
+      opacity: -1,
+      duration: 20000,
+    });
 
-  const envelopeMove = anime({
-    targets: ".envelope",
-    opacity: -1,
-    duration: 20000,
-  });
+    const envelopeMove = anime({
+      targets: ".envelope",
+      opacity: -1,
+      duration: 20000,
+    });
 
-  const backgroundDissapear = anime({
-    targets: ".background",
-    opacity: -1,
-    duration: 20000,
-  });
+    const backgroundDissapear = anime({
+      targets: ".background",
+      opacity: -1,
+      duration: 20000,
+    });
 
-  const flowerMove = anime({
-    targets: ".flowerss",
-    translateY: 90,
-    duration: 500,
-    delay: 1300,
-  });
+    const flowerMove = anime({
+      targets: ".flowerss",
+      translateY: 90,
+      duration: 500,
+      delay: 1300,
+    });
 
-  document.querySelector(".flowerss").addEventListener("click", function () {
-    const text =
-      "Chúc mừng sinh nhật người chị đáng yêu dễ thương quá trời của tui nhaaa! Cảm ơn chị và đã mang đến cho em niềm vui trong cuộc sống này (cũng không hẳn tại chị toàn bơ em =v), nhân ngày hôm nay em chúc chị luôn xinh tươi, yêu đời và thành công trong cuộc sống. Nếu ai hỏi em món quà đắt giá nhất mà em có thể tặng cho chị là gì thì em xin trả lời rằng: món quà đó là em :P. Dưới đây là những món quà tinh thần cho chị =)))), hôm nào gặp nhau thì quà vật chất sau nhaaaa! iu chị lắm ♡ ♡"; // Replace with your desired text
-    const typewriterText = document.querySelector(".letter #typewriterText");
-    let i = 0;
+    document.querySelector(".flowerss").addEventListener("click", function () {
+      const text =
+          "Chúc mừng sinh nhật người chị đáng yêu dễ thương quá trời của tui nhaaa! Cảm ơn chị và đã mang đến cho em niềm vui trong cuộc sống này (cũng không hẳn tại chị toàn bơ em =v), nhân ngày hôm nay em chúc chị luôn xinh tươi, yêu đời và thành công trong cuộc sống. Nếu ai hỏi em món quà đắt giá nhất mà em có thể tặng cho chị là gì thì em xin trả lời rằng: món quà đó là em :P. Dưới đây là những món quà tinh thần cho chị =)))), hôm nào gặp nhau thì quà vật chất sau nhaaaa! iu chị lắm ♡ ♡"; // Replace with your desired text
+      const typewriterText = document.querySelector(".letter #typewriterText");
+      let i = 0;
 
-    const typewriterInterval = setInterval(function () {
-      typewriterText.textContent += text.charAt(i);
-      i++;
-      if (i >= text.length) {
-        clearInterval(typewriterInterval);
-      }
-    }, 40); // Adjust the delay between each character
-  });
+      const typewriterInterval = setInterval(function () {
+        typewriterText.textContent += text.charAt(i);
+        i++;
+        if (i >= text.length) {
+          clearInterval(typewriterInterval);
+        }
+      }, 40); // Adjust the delay between each character
+    });
+  } else {
+    const paper = anime({
+      targets: ".letter",
+      durations: 1000,
+      scale: 3.7,
+    });
+
+    const buttonDissapear = anime({
+      targets: ".btn",
+      opacity: -1,
+      duration: 20000,
+    });
+
+    const lidMove = anime({
+      targets: ".lid",
+      opacity: -1,
+      duration: 20000,
+    });
+
+    const envelopeMove = anime({
+      targets: ".envelope",
+      opacity: -1,
+      duration: 20000,
+    });
+
+    const backgroundDissapear = anime({
+      targets: ".background",
+      opacity: -1,
+      duration: 20000,
+    });
+
+    const flowerMove = anime({
+      targets: ".flowerss",
+      translateY: 90,
+      duration: 500,
+      delay: 1300,
+    });
+
+    document.querySelector(".flowerss").addEventListener("click", function () {
+      const text =
+          "Chúc mừng sinh nhật người chị đáng yêu dễ thương quá trời của tui nhaaa! Cảm ơn chị và đã mang đến cho em niềm vui trong cuộc sống này (cũng không hẳn tại chị toàn bơ em =v), nhân ngày hôm nay em chúc chị luôn xinh tươi, yêu đời và thành công trong cuộc sống. Nếu ai hỏi em món quà đắt giá nhất mà em có thể tặng cho chị là gì thì em xin trả lời rằng: món quà đó là em :P. Dưới đây là những món quà tinh thần cho chị =)))), hôm nào gặp nhau thì quà vật chất sau nhaaaa! iu chị lắm ♡ ♡"; // Replace with your desired text
+      const typewriterText = document.querySelector(".letter #typewriterText");
+      let i = 0;
+
+      const typewriterInterval = setInterval(function () {
+        typewriterText.textContent += text.charAt(i);
+        i++;
+        if (i >= text.length) {
+          clearInterval(typewriterInterval);
+        }
+      }, 40); // Adjust the delay between each character
+    });
+  }
 }
 
 function hideButton() {
-  anime({
-    targets: ".flowerss",
-    translateY: -500,
-    duration: 1000,
-  });
+  if (mediaQuery.matches) {
+    anime({
+      targets: ".flowerss",
+      translateY: -500,
+      duration: 1000,
+    });
 
-  anime({
-    targets: ".gift-tab",
-    translateX: -200,
-    delay: 19400,
-  });
+    anime({
+      targets: ".gift-tab",
+      opacity: 1,
+      delay: 17000,
+      duration: 2000,
+    });
 
-  const heartButtonMove = anime({
-    targets: ".heart-tab",
-    translateX: 200,
-    delay: 19300,
-  });
+    const heartButtonMove = anime({
+      targets: ".heart-tab",
+      opacity: 1,
+      delay: 16800,
+      duration: 2000,
+    });
 
-  anime({
-    targets: ".flower-tab",
-    translateY: -260,
-    delay: 19500,
-  });
+    anime({
+      targets: ".flower-tab",
+      opacity: 1,
+      delay: 16900,
+      duration: 2000,
+    });
+  } else {
+    anime({
+      targets: ".flowerss",
+      translateY: -500,
+      duration: 1000,
+    });
+
+    anime({
+      targets: ".gift-tab",
+      translateX: -200,
+      delay: 19400,
+    });
+
+    const heartButtonMove = anime({
+      targets: ".heart-tab",
+      translateX: 200,
+      delay: 19300,
+    });
+
+    anime({
+      targets: ".flower-tab",
+      translateY: -260,
+      delay: 19500,
+    });
+  }
 }
 
 window.addEventListener("load", function () {
@@ -218,345 +303,356 @@ function prevTrack() {
 }
 
 function heartSide() {
-  const heartSide = anime({
-    targets: ".wrapper",
-    translateX: 1500,
-    duration: 4000,
-  });
+  if (mediaQuery.matches) {
 
-  anime({
-    targets: ".flower-tab",
-    translateY: 500,
-    duration: 2500,
-    easing: "easeInOutQuad",
-  });
+  } else {
+    const heartSide = anime({
+      targets: ".wrapper",
+      translateX: 1500,
+      duration: 4000,
+    });
 
-  anime({
-    targets: ".background",
-    translateX: 1500,
-    duration: 4000,
-  });
+    anime({
+      targets: ".flower-tab",
+      translateY: 500,
+      duration: 2500,
+      easing: "easeInOutQuad",
+    });
 
-  anime({
-    targets: ".music-container",
-    translateX: -500,
-    duration: 4000,
-  });
+    anime({
+      targets: ".background",
+      translateX: 1500,
+      duration: 4000,
+    });
 
-  anime({
-    targets: ".heart-tab",
-    translateX: -1000,
-    duration: 4000,
-  });
+    anime({
+      targets: ".music-container",
+      translateX: -500,
+      duration: 4000,
+    });
 
-  anime({
-    targets: ".gift-tab",
-    translateX: 1500,
-    duration: 4000,
-  });
+    anime({
+      targets: ".heart-tab",
+      translateX: -1000,
+      duration: 4000,
+    });
 
-  /*
-   * Settings
-   */
-  var settings = {
-    particles: {
-      length: 500, // maximum amount of particles
-      duration: 2, // particle duration in sec
-      velocity: 100, // particle velocity in pixels/sec
-      effect: -0.75, // play with this for a nice effect
-      size: 30, // particle size in pixels
-    },
-  };
+    anime({
+      targets: ".gift-tab",
+      translateX: 1500,
+      duration: 4000,
+    });
 
-  /*
-   * RequestAnimationFrame polyfill by Erik Möller
-   */
-  (function () {
-    var b = 0;
-    var c = ["ms", "moz", "webkit", "o"];
-    for (var a = 0; a < c.length && !window.requestAnimationFrame; ++a) {
-      window.requestAnimationFrame = window[c[a] + "RequestAnimationFrame"];
-      window.cancelAnimationFrame =
-        window[c[a] + "CancelAnimationFrame"] ||
-        window[c[a] + "CancelRequestAnimationFrame"];
-    }
-    if (!window.requestAnimationFrame) {
-      window.requestAnimationFrame = function (h, e) {
-        var d = new Date().getTime();
-        var f = Math.max(0, 16 - (d - b));
-        var g = window.setTimeout(function () {
-          h(d + f);
-        }, f);
-        b = d + f;
-        return g;
-      };
-    }
-    if (!window.cancelAnimationFrame) {
-      window.cancelAnimationFrame = function (d) {
-        clearTimeout(d);
-      };
-    }
-  })();
-
-  /*
-   * Point class
-   */
-  var Point = (function () {
-    function Point(x, y) {
-      this.x = typeof x !== "undefined" ? x : 0;
-      this.y = typeof y !== "undefined" ? y : 0;
-    }
-    Point.prototype.clone = function () {
-      return new Point(this.x, this.y);
+    /*
+     * Settings
+     */
+    var settings = {
+      particles: {
+        length: 500, // maximum amount of particles
+        duration: 2, // particle duration in sec
+        velocity: 100, // particle velocity in pixels/sec
+        effect: -0.75, // play with this for a nice effect
+        size: 30, // particle size in pixels
+      },
     };
-    Point.prototype.length = function (length) {
-      if (typeof length == "undefined")
-        return Math.sqrt(this.x * this.x + this.y * this.y);
-      this.normalize();
-      this.x *= length;
-      this.y *= length;
-      return this;
-    };
-    Point.prototype.normalize = function () {
-      var length = this.length();
-      this.x /= length;
-      this.y /= length;
-      return this;
-    };
-    return Point;
-  })();
 
-  /*
-   * Particle class
-   */
-  var Particle = (function () {
-    function Particle() {
-      this.position = new Point();
-      this.velocity = new Point();
-      this.acceleration = new Point();
-      this.age = 0;
-    }
-    Particle.prototype.initialize = function (x, y, dx, dy) {
-      this.position.x = x;
-      this.position.y = y;
-      this.velocity.x = dx;
-      this.velocity.y = dy;
-      this.acceleration.x = dx * settings.particles.effect;
-      this.acceleration.y = dy * settings.particles.effect;
-      this.age = 0;
-    };
-    Particle.prototype.update = function (deltaTime) {
-      this.position.x += this.velocity.x * deltaTime;
-      this.position.y += this.velocity.y * deltaTime;
-      this.velocity.x += this.acceleration.x * deltaTime;
-      this.velocity.y += this.acceleration.y * deltaTime;
-      this.age += deltaTime;
-    };
-    Particle.prototype.draw = function (context, image) {
-      function ease(t) {
-        return --t * t * t + 1;
+    /*
+     * RequestAnimationFrame polyfill by Erik Möller
+     */
+    (function () {
+      var b = 0;
+      var c = ["ms", "moz", "webkit", "o"];
+      for (var a = 0; a < c.length && !window.requestAnimationFrame; ++a) {
+        window.requestAnimationFrame = window[c[a] + "RequestAnimationFrame"];
+        window.cancelAnimationFrame =
+            window[c[a] + "CancelAnimationFrame"] ||
+            window[c[a] + "CancelRequestAnimationFrame"];
       }
-      var size = image.width * ease(this.age / settings.particles.duration);
-      context.globalAlpha = 1 - this.age / settings.particles.duration;
-      context.drawImage(
-        image,
-        this.position.x - size / 2,
-        this.position.y - size / 2,
-        size,
-        size
-      );
-    };
-    return Particle;
-  })();
-
-  /*
-   * ParticlePool class
-   */
-  var ParticlePool = (function () {
-    var particles,
-      firstActive = 0,
-      firstFree = 0,
-      duration = settings.particles.duration;
-
-    function ParticlePool(length) {
-      // create and populate particle pool
-      particles = new Array(length);
-      for (var i = 0; i < particles.length; i++) particles[i] = new Particle();
-    }
-    ParticlePool.prototype.add = function (x, y, dx, dy) {
-      particles[firstFree].initialize(x, y, dx, dy);
-
-      // handle circular queue
-      firstFree++;
-      if (firstFree == particles.length) firstFree = 0;
-      if (firstActive == firstFree) firstActive++;
-      if (firstActive == particles.length) firstActive = 0;
-    };
-    ParticlePool.prototype.update = function (deltaTime) {
-      var i;
-
-      // update active particles
-      if (firstActive < firstFree) {
-        for (i = firstActive; i < firstFree; i++)
-          particles[i].update(deltaTime);
+      if (!window.requestAnimationFrame) {
+        window.requestAnimationFrame = function (h, e) {
+          var d = new Date().getTime();
+          var f = Math.max(0, 16 - (d - b));
+          var g = window.setTimeout(function () {
+            h(d + f);
+          }, f);
+          b = d + f;
+          return g;
+        };
       }
-      if (firstFree < firstActive) {
-        for (i = firstActive; i < particles.length; i++)
-          particles[i].update(deltaTime);
-        for (i = 0; i < firstFree; i++) particles[i].update(deltaTime);
+      if (!window.cancelAnimationFrame) {
+        window.cancelAnimationFrame = function (d) {
+          clearTimeout(d);
+        };
       }
-
-      // remove inactive particles
-      while (
-        particles[firstActive].age >= duration &&
-        firstActive != firstFree
-      ) {
-        firstActive++;
-        if (firstActive == particles.length) firstActive = 0;
-      }
-    };
-    ParticlePool.prototype.draw = function (context, image) {
-      // draw active particles
-      if (firstActive < firstFree) {
-        for (i = firstActive; i < firstFree; i++)
-          particles[i].draw(context, image);
-      }
-      if (firstFree < firstActive) {
-        for (i = firstActive; i < particles.length; i++)
-          particles[i].draw(context, image);
-        for (i = 0; i < firstFree; i++) particles[i].draw(context, image);
-      }
-    };
-    return ParticlePool;
-  })();
-
-  /*
-   * Putting it all together
-   */
-  (function (canvas) {
-    var context = canvas.getContext("2d"),
-      particles = new ParticlePool(settings.particles.length),
-      particleRate = settings.particles.length / settings.particles.duration, // particles/sec
-      time;
-
-    // get point on heart with -PI <= t <= PI
-    function pointOnHeart(t) {
-      return new Point(
-        160 * Math.pow(Math.sin(t), 3),
-        130 * Math.cos(t) -
-          50 * Math.cos(2 * t) -
-          20 * Math.cos(3 * t) -
-          10 * Math.cos(4 * t) +
-          25
-      );
-    }
-
-    // creating the particle image using a dummy canvas
-    var image = (function () {
-      var canvas = document.createElement("canvas"),
-        context = canvas.getContext("2d");
-      canvas.width = settings.particles.size;
-      canvas.height = settings.particles.size;
-      // helper function to create the path
-      function to(t) {
-        var point = pointOnHeart(t);
-        point.x =
-          settings.particles.size / 2 +
-          (point.x * settings.particles.size) / 350;
-        point.y =
-          settings.particles.size / 2 -
-          (point.y * settings.particles.size) / 350;
-        return point;
-      }
-      // create the path
-      context.beginPath();
-      var t = -Math.PI;
-      var point = to(t);
-      context.moveTo(point.x, point.y);
-      while (t < Math.PI) {
-        t += 0.01; // baby steps!
-        point = to(t);
-        context.lineTo(point.x, point.y);
-      }
-      context.closePath();
-      // create the fill
-      context.fillStyle = "#ea80b0";
-      context.fill();
-      // create the image
-      var image = new Image();
-      image.src = canvas.toDataURL();
-      return image;
     })();
 
-    // render that thing!
-    function render() {
-      // next animation frame
-      requestAnimationFrame(render);
+    /*
+     * Point class
+     */
+    var Point = (function () {
+      function Point(x, y) {
+        this.x = typeof x !== "undefined" ? x : 0;
+        this.y = typeof y !== "undefined" ? y : 0;
+      }
 
-      // update time
-      var newTime = new Date().getTime() / 1000,
-        deltaTime = newTime - (time || newTime);
-      time = newTime;
+      Point.prototype.clone = function () {
+        return new Point(this.x, this.y);
+      };
+      Point.prototype.length = function (length) {
+        if (typeof length == "undefined")
+          return Math.sqrt(this.x * this.x + this.y * this.y);
+        this.normalize();
+        this.x *= length;
+        this.y *= length;
+        return this;
+      };
+      Point.prototype.normalize = function () {
+        var length = this.length();
+        this.x /= length;
+        this.y /= length;
+        return this;
+      };
+      return Point;
+    })();
 
-      // clear canvas
-      context.clearRect(0, 0, canvas.width, canvas.height);
+    /*
+     * Particle class
+     */
+    var Particle = (function () {
+      function Particle() {
+        this.position = new Point();
+        this.velocity = new Point();
+        this.acceleration = new Point();
+        this.age = 0;
+      }
 
-      // create new particles
-      var amount = particleRate * deltaTime;
-      for (var i = 0; i < amount; i++) {
-        var pos = pointOnHeart(Math.PI - 2 * Math.PI * Math.random());
-        var dir = pos.clone().length(settings.particles.velocity);
-        particles.add(
-          canvas.width / 2 + pos.x,
-          canvas.height / 2 - pos.y,
-          dir.x,
-          -dir.y
+      Particle.prototype.initialize = function (x, y, dx, dy) {
+        this.position.x = x;
+        this.position.y = y;
+        this.velocity.x = dx;
+        this.velocity.y = dy;
+        this.acceleration.x = dx * settings.particles.effect;
+        this.acceleration.y = dy * settings.particles.effect;
+        this.age = 0;
+      };
+      Particle.prototype.update = function (deltaTime) {
+        this.position.x += this.velocity.x * deltaTime;
+        this.position.y += this.velocity.y * deltaTime;
+        this.velocity.x += this.acceleration.x * deltaTime;
+        this.velocity.y += this.acceleration.y * deltaTime;
+        this.age += deltaTime;
+      };
+      Particle.prototype.draw = function (context, image) {
+        function ease(t) {
+          return --t * t * t + 1;
+        }
+
+        var size = image.width * ease(this.age / settings.particles.duration);
+        context.globalAlpha = 1 - this.age / settings.particles.duration;
+        context.drawImage(
+            image,
+            this.position.x - size / 2,
+            this.position.y - size / 2,
+            size,
+            size
+        );
+      };
+      return Particle;
+    })();
+
+    /*
+     * ParticlePool class
+     */
+    var ParticlePool = (function () {
+      var particles,
+          firstActive = 0,
+          firstFree = 0,
+          duration = settings.particles.duration;
+
+      function ParticlePool(length) {
+        // create and populate particle pool
+        particles = new Array(length);
+        for (var i = 0; i < particles.length; i++) particles[i] = new Particle();
+      }
+
+      ParticlePool.prototype.add = function (x, y, dx, dy) {
+        particles[firstFree].initialize(x, y, dx, dy);
+
+        // handle circular queue
+        firstFree++;
+        if (firstFree == particles.length) firstFree = 0;
+        if (firstActive == firstFree) firstActive++;
+        if (firstActive == particles.length) firstActive = 0;
+      };
+      ParticlePool.prototype.update = function (deltaTime) {
+        var i;
+
+        // update active particles
+        if (firstActive < firstFree) {
+          for (i = firstActive; i < firstFree; i++)
+            particles[i].update(deltaTime);
+        }
+        if (firstFree < firstActive) {
+          for (i = firstActive; i < particles.length; i++)
+            particles[i].update(deltaTime);
+          for (i = 0; i < firstFree; i++) particles[i].update(deltaTime);
+        }
+
+        // remove inactive particles
+        while (
+            particles[firstActive].age >= duration &&
+            firstActive != firstFree
+            ) {
+          firstActive++;
+          if (firstActive == particles.length) firstActive = 0;
+        }
+      };
+      ParticlePool.prototype.draw = function (context, image) {
+        // draw active particles
+        if (firstActive < firstFree) {
+          for (i = firstActive; i < firstFree; i++)
+            particles[i].draw(context, image);
+        }
+        if (firstFree < firstActive) {
+          for (i = firstActive; i < particles.length; i++)
+            particles[i].draw(context, image);
+          for (i = 0; i < firstFree; i++) particles[i].draw(context, image);
+        }
+      };
+      return ParticlePool;
+    })();
+
+    /*
+     * Putting it all together
+     */
+    (function (canvas) {
+      var context = canvas.getContext("2d"),
+          particles = new ParticlePool(settings.particles.length),
+          particleRate = settings.particles.length / settings.particles.duration, // particles/sec
+          time;
+
+      // get point on heart with -PI <= t <= PI
+      function pointOnHeart(t) {
+        return new Point(
+            160 * Math.pow(Math.sin(t), 3),
+            130 * Math.cos(t) -
+            50 * Math.cos(2 * t) -
+            20 * Math.cos(3 * t) -
+            10 * Math.cos(4 * t) +
+            25
         );
       }
 
-      // update and draw particles
-      particles.update(deltaTime);
-      particles.draw(context, image);
-    }
+      // creating the particle image using a dummy canvas
+      var image = (function () {
+        var canvas = document.createElement("canvas"),
+            context = canvas.getContext("2d");
+        canvas.width = settings.particles.size;
+        canvas.height = settings.particles.size;
 
-    // handle (re-)sizing of the canvas
-    function onResize() {
-      canvas.width = canvas.clientWidth;
-      canvas.height = canvas.clientHeight;
-    }
-    window.onresize = onResize;
+        // helper function to create the path
+        function to(t) {
+          var point = pointOnHeart(t);
+          point.x =
+              settings.particles.size / 2 +
+              (point.x * settings.particles.size) / 350;
+          point.y =
+              settings.particles.size / 2 -
+              (point.y * settings.particles.size) / 350;
+          return point;
+        }
 
-    // delay rendering bootstrap
-    setTimeout(function () {
-      onResize();
-      render();
-    }, 1500);
-  })(document.getElementById("pinkboard"));
+        // create the path
+        context.beginPath();
+        var t = -Math.PI;
+        var point = to(t);
+        context.moveTo(point.x, point.y);
+        while (t < Math.PI) {
+          t += 0.01; // baby steps!
+          point = to(t);
+          context.lineTo(point.x, point.y);
+        }
+        context.closePath();
+        // create the fill
+        context.fillStyle = "#ea80b0";
+        context.fill();
+        // create the image
+        var image = new Image();
+        image.src = canvas.toDataURL();
+        return image;
+      })();
 
-  anime({
-    targets: ".black-background",
-    translateY: "1500",
-    duration: 2000,
-    easing: "easeInOutQuad",
-  });
+      // render that thing!
+      function render() {
+        // next animation frame
+        requestAnimationFrame(render);
 
-  document.getElementById("black-background").style.zIndex = "-1";
-  document.getElementById("pinkboard").style.zIndex = "1";
+        // update time
+        var newTime = new Date().getTime() / 1000,
+            deltaTime = newTime - (time || newTime);
+        time = newTime;
 
-  anime({
-    targets: ".remove",
-    translateY: 180,
-    duration: 2000,
-    delay: 5000,
-    easing: "easeInOutQuad",
-  });
+        // clear canvas
+        context.clearRect(0, 0, canvas.width, canvas.height);
 
-  anime({
-    targets: ".animated-heart",
-    opacity: 1,
-    duration: 2000,
-    delay: 1500,
-  });
+        // create new particles
+        var amount = particleRate * deltaTime;
+        for (var i = 0; i < amount; i++) {
+          var pos = pointOnHeart(Math.PI - 2 * Math.PI * Math.random());
+          var dir = pos.clone().length(settings.particles.velocity);
+          particles.add(
+              canvas.width / 2 + pos.x,
+              canvas.height / 2 - pos.y,
+              dir.x,
+              -dir.y
+          );
+        }
+
+        // update and draw particles
+        particles.update(deltaTime);
+        particles.draw(context, image);
+      }
+
+      // handle (re-)sizing of the canvas
+      function onResize() {
+        canvas.width = canvas.clientWidth;
+        canvas.height = canvas.clientHeight;
+      }
+
+      window.onresize = onResize;
+
+      // delay rendering bootstrap
+      setTimeout(function () {
+        onResize();
+        render();
+      }, 1500);
+    })(document.getElementById("pinkboard"));
+
+    anime({
+      targets: ".black-background",
+      translateY: "1500",
+      duration: 2000,
+      easing: "easeInOutQuad",
+    });
+
+    document.getElementById("black-background").style.zIndex = "-1";
+    document.getElementById("pinkboard").style.zIndex = "1";
+
+    anime({
+      targets: ".remove",
+      translateY: 180,
+      duration: 2000,
+      delay: 5000,
+      easing: "easeInOutQuad",
+    });
+
+    anime({
+      targets: ".animated-heart",
+      opacity: 1,
+      duration: 2000,
+      delay: 1500,
+    });
+  }
 }
 
 function giftSide() {
@@ -734,3 +830,5 @@ function hideLoadingBackground() {
 }
 
 setTimeout(hideLoadingBackground, 4600);
+
+var mediaQuery = window.matchMedia("(max-width: 450px)");
