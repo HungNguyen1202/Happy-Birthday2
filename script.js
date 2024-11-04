@@ -163,18 +163,33 @@ function hideButton() {
   }
 }
 
-window.addEventListener("load", function () {
-  setTimeout(function () {
-    const loadingBackground = document.querySelector(".loading-background");
-    anime({
-      targets: ".loading-background",
-      opacity: [0, 1],
-      duration: 4000, // Animation duration in milliseconds (4000 milliseconds = 4 seconds)
-      easing: "easeOutQuad", // Slowly disappear using quadratic easing function
-    });
-    loadingBackground.style.display = "none";
-  }, 4500); // Delay time in milliseconds (2000 milliseconds = 2 seconds)
-});
+if (mediaQuery.matches) {
+  window.addEventListener("load", function () {
+    setTimeout(function () {
+      const loadingBackground = document.querySelector(".loading-background");
+      anime({
+        targets: ".loading-background",
+        opacity: [0, 1],
+        duration: 4000, // Animation duration in milliseconds (4000 milliseconds = 4 seconds)
+        easing: "easeOutQuad", // Slowly disappear using quadratic easing function
+      });
+      loadingBackground.style.display = "none";
+    }, 4500); // Delay time in milliseconds (2000 milliseconds = 2 seconds)
+  });
+} else {
+  window.addEventListener("load", function () {
+    setTimeout(function () {
+      const loadingBackground = document.querySelector(".loading-background");
+      anime({
+        targets: ".loading-background",
+        opacity: [0, 1],
+        duration: 4000, // Animation duration in milliseconds (4000 milliseconds = 4 seconds)
+        easing: "easeOutQuad", // Slowly disappear using quadratic easing function
+      });
+      loadingBackground.style.display = "none";
+    }, 4500); // Delay time in milliseconds (2000 milliseconds = 2 seconds)
+  });
+}
 
 
 function heartSide() {
