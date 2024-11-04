@@ -163,6 +163,7 @@ function hideButton() {
   }
 }
 
+
 window.addEventListener("load", function () {
   setTimeout(function () {
     const loadingBackground = document.querySelector(".loading-background");
@@ -288,10 +289,11 @@ function heartSide() {
 
     anime({
       targets: ".remove",
-      translateY: 180,
+      translateY: 250,
       duration: 2000,
       delay: 5000,
       easing: "easeInOutQuad",
+      zIndex: 2,
     });
 
     anime({
@@ -684,10 +686,11 @@ function giftSide() {
 
     anime({
       targets: ".remove",
-      translateY: 180,
+      translateY: 250,
       duration: 2000,
       delay: 5000,
       easing: "easeInOutQuad",
+      zIndex: 2,
     });
 
     anime({
