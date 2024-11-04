@@ -1105,29 +1105,46 @@ body {
 }
 
 @media screen and (max-width: 450px) {
+
   .music-container {
     width: 90%;
     left: 10px;
   }
 
   .gift-tab {
-    left: 300px;
-    top: 700px;
-    opacity: 1;
+    margin-right: 150px;
+    margin-top: 100px;
+    opacity: 0;
   }
 
   .flower-tab {
-    top: 700px;
-    opacity: 1;
+    margin-bottom: 350px;
+    opacity: 0;
   }
 
   .heart-tab {
-    left: 60px;
-    top: 700px;
-    opacity: 1;
+    margin-left: 150px;
+    margin-top: 100px;
+    opacity: 0;
+  }
+
+  .black-background{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    opacity: 0;
+    z-index: -1;
+  }
+
+  .gift-background{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    opacity: 0;
+    z-index: -1;
   }
 
   .letter #typewriterText {
-    font-size: 22px;
+    font-size: 20px;
   }
 }
